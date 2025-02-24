@@ -1,7 +1,7 @@
 name: advy_flutter_sdk
 description: "A new Flutter project."
 version: 0.0.1
-homepage:
+homepage: "https://github.com/bishalkuiry/advy-flutter-adk"
 
 environment:
   sdk: ^3.6.1
