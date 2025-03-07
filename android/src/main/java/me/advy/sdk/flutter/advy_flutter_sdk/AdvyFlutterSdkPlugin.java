@@ -7,6 +7,7 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
+import me.advy.sdk.Advy;
 
 /** AdvyFlutterSdkPlugin */
 public class AdvyFlutterSdkPlugin implements FlutterPlugin, MethodCallHandler {
@@ -24,8 +25,8 @@ public class AdvyFlutterSdkPlugin implements FlutterPlugin, MethodCallHandler {
 
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
-    if (call.method.equals("getPlatformVersion")) {
-      result.success("Android " + android.os.Build.VERSION.RELEASE);
+    if (call.method.equals("init")) {
+      Advy.init("qbdADBlbqnqJWhC_", "TXcyqhFylOO-PJkA8-_0", this, new Intent());
     } else {
       result.notImplemented();
     }

@@ -10,8 +10,10 @@ class MethodChannelAdvyFlutterSdk extends AdvyFlutterSdkPlatform {
   final methodChannel = const MethodChannel('advy_flutter_sdk');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
+  void init(String appId, String appKey) {
+    methodChannel.invokeMethod<void>('init', <String, String>{
+      'appId': appId,
+      'appKey': appKey,
+    });
   }
 }

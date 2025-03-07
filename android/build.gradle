@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:8.1.0")
+        classpath("com.android.tools.build:gradle:8.1.4")
     }
 }
 
@@ -16,8 +16,10 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
+
 
 apply plugin: "com.android.library"
 
@@ -49,4 +51,8 @@ android {
             }
         }
     }
+}
+
+dependencies {
+    implementation("com.github.bishalkuiry:advy-sdk-android-release:1.0.3.r.1")
 }

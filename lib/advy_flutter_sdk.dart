@@ -2,7 +2,7 @@
 import 'advy_flutter_sdk_platform_interface.dart';
 
 class AdvyFlutterSdk {
-  Future<String?> getPlatformVersion() {
-    return AdvyFlutterSdkPlatform.instance.getPlatformVersion();
+  void init(String appId, String appKey) {
+    AdvyFlutterSdkPlatform.instance.init(appId, appKey);
   }
 }

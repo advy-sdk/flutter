@@ -23,7 +23,7 @@ abstract class AdvyFlutterSdkPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+  void init(String appId, String appKey) {
+    throw UnimplementedError('init() has not been implemented.');
   }
 }

@@ -10,6 +10,11 @@ class MockAdvyFlutterSdkPlatform
 
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+
+  @override
+  void init(String appId, String appKey) {
+    // TODO: implement init
+  }
 }
 
 void main() {
@@ -17,13 +22,5 @@ void main() {
 
   test('$MethodChannelAdvyFlutterSdk is the default instance', () {
     expect(initialPlatform, isInstanceOf<MethodChannelAdvyFlutterSdk>());
-  });
-
-  test('getPlatformVersion', () async {
-    AdvyFlutterSdk advyFlutterSdkPlugin = AdvyFlutterSdk();
-    MockAdvyFlutterSdkPlatform fakePlatform = MockAdvyFlutterSdkPlatform();
-    AdvyFlutterSdkPlatform.instance = fakePlatform;
-
-    expect(await advyFlutterSdkPlugin.getPlatformVersion(), '42');
   });
 }
