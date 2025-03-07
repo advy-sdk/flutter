@@ -1,6 +1,6 @@
 name: advy_flutter_sdk
 description: "A advy flutter sdk plugin."
-version: 0.0.2
+version: 1.0.0
 homepage: "https://github.com/advy-sdk/flutter.git"
 repository: "https://github.com/advy-sdk/flutter.git"
 
