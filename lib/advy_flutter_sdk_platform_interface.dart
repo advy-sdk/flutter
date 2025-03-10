@@ -23,7 +23,23 @@ abstract class AdvyFlutterSdkPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  void init(String appId, String appKey) {
+  Future<bool?> init(String appId, String appKey) {
     throw UnimplementedError('init() has not been implemented.');
+  }
+
+  Future<bool?> isInitialized() {
+    throw UnimplementedError('isInitialized() has not been implemented.');
+  }
+
+  Future<String?> setId(String id) {
+    throw UnimplementedError('setIdfa() has not been implemented.');
+  }
+
+  Future<String?> event(String name, Map<String, dynamic> params) {
+    throw UnimplementedError('setIdfa() has not been implemented.');
+  }
+
+  Future<String?> getDeepLinkData() {
+    throw UnimplementedError('getPlatformVersion() has not been implemented.');
   }
 }

@@ -12,8 +12,31 @@ class MockAdvyFlutterSdkPlatform
   Future<String?> getPlatformVersion() => Future.value('42');
 
   @override
-  void init(String appId, String appKey) {
-    // TODO: implement init
+  Future<bool> init(String appId, String appKey) {
+    return Future.value(true);
+  }
+
+  @override
+  Future<bool?> isInitialized() {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<String?> setId(String id) {
+    // TODO: implement setId
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<String?> event(String name, Map<String, dynamic> params) {
+    // TODO: implement event
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<String?> getDeepLinkData() {
+    // TODO: implement getDeepLinkData
+    throw UnimplementedError();
   }
 }
 

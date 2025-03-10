@@ -27,7 +27,15 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    _advyFlutterSdkPlugin.init("dsfsd", "appKey");
+    bool? data = await _advyFlutterSdkPlugin.init(appId: "x6eb6oo1ykqvd4vc",appKey: "teufhx6nodzd13l2sikr");
+    setState(() {
+      _platformVersion = "data.toString()";
+    });
+    await Future.delayed(Duration(seconds: 2));
+    String? data2 = await _advyFlutterSdkPlugin.getDeepLinkData();
+    setState(() {
+      _platformVersion = data2.toString();
+    });
   }
 
   @override
